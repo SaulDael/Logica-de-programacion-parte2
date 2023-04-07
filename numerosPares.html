@@ -1,0 +1,25 @@
+<meta charset="UTF-8" />
+
+<h1>Numeros Pares</h1>
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(imprime) {
+    document.write(imprime);
+    saltarLinea();
+  }
+
+  let n = 1;
+  while (n <= 100) {
+    if (n % 2 === 0) {
+      imprimir(n);
+    }
+    n++;
+  }
+  imprimir("fin");
+</script>

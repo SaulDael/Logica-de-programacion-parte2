@@ -1,0 +1,49 @@
+<meta charset="UTF-8" />
+
+<h1>Programa Adivina El Numero</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(imprime) {
+        document.write(imprime);
+        saltarLinea();
+    }
+
+    //uso de funcion con parametro y return
+    function sorteo(n) {
+        return Math.round(Math.random() * n);
+
+    }
+
+    var numeroPensado = sorteo(10);
+    var intentos = 3;
+    var contador = 1;
+
+
+    while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt("ingrese un numero del 1 al 10"));
+        if (numeroPensado == numeroLanzado) {
+            alert("Acerto en el intento " + contador + " el numero correcto era: " + numeroPensado );
+            break;
+        } else {
+                alert("¡Error!");
+            }
+        contador++;
+
+    }
+
+    if (numeroPensado == numeroLanzado) {
+            alert("Acerto en el intento" + contador + "el numero correcto era:" + numeroPensado );
+            
+        } else {
+                imprimir("¡Error!, el numero correcto era: " + numeroPensado);
+            }
+
+            imprimir("¡FIN!")
+</script>
